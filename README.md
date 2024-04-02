@@ -21,3 +21,9 @@ NOTE: running this script will erase all data on the disks and is intended for n
 - The script runs all tests in parallel, which is efficient but can be very demanding on your system. Monitor system performance and adjust if necessary.
 - Review the output files for each disk to check for any errors or failed tests.
 
+## Burn-in Test Efficiency
+To ensure our script for the burn-in tests runs as efficiently as possible, it's crucial to tailor the sleep durations to the actual time reported by the SMART tests. This precision allows our script to wait just the right amount of time before proceeding, optimizing our use of resources and time. 
+
+To determine the actual time SMART tests will take, you can use the smartctl command to initiate a test and then query the drive for its estimated completion time. Let's create a script which does all of this automatically.  
+
+
